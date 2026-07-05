@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madelief & Johan — 8-10 January 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E1;
+      --warm-white: #FAF7EF;
+      --gold: #5E8E5E;
+      --gold-light: #7AAE7A;
+      --gold-bg: #EAF2EA;
+      --gold-border: #C8DCC8;
+      --text: #1C1C16;
+      --text-muted: #6E7A64;
+      --text-light: #A8B0A0;
+      --border: rgba(0,0,0,0.09);
+      --border-strong: rgba(0,0,0,0.15);
+      --card-bg: #F7F5EE;
+      --green-bg: #EAF2EA;
+      --green-border: #B8D4B8;
+      --green-text: #3A7A3A;
+      --red-bg: #F5EDEA;
+      --red-border: #DCC0B8;
+      --red-text: #7A3A2A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background-color: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background-image: linear-gradient(rgba(255,252,247,0.45), rgba(255,252,247,0.45)), url("images/VNL.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 6rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(94,142,94,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      max-width: 560px;
+      margin: 0 auto;
+      background: rgba(255,252,247,0.82);
+      backdrop-filter: blur(8px);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border: 0.5px solid rgba(212,184,120,0.35);
+      position: relative;
+      z-index: 2;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.1s;
+    }
+    .hero-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 8vw, 72px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.25s;
+    }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.33s;
+    }
+    .hero-ampersand { color: var(--gold-light); }
+    .hero-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+    .hero-venue {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--gold-bg);
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      padding: 7px 18px;
+      border-radius: 24px;
+      border: 0.5px solid var(--gold-border);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.55s;
+    }
+    .hero-divider {
+      width: 40px;
+      height: 0.5px;
+      background: var(--gold-border);
+      margin: 2.5rem auto 0;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.7s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── NAV ── */
+    .nav-wrapper {
+      background: var(--warm-white);
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      padding: 0.75rem 1rem;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: transparent;
+      border: 0.5px solid transparent;
+      border-radius: 20px;
+      padding: 7px 18px;
+      font-size: 12px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--gold-bg);
+      color: var(--gold);
+      border-color: var(--gold-border);
+    }
+
+    /* ── LAYOUT ── */
+    .page { display: none; }
+    .page.visible { display: block; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      line-height: 1.15;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+    .divider {
+      height: 0.5px;
+      background: var(--gold-border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 1.75rem; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 0.5px;
+      background: var(--gold-border);
+    }
+    .tl-item { position: relative; margin-bottom: 2rem; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -1.75rem;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      border: 2px solid var(--cream);
+    }
+    .tl-time {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+    .tl-event {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    .tl-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── CARDS ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+    }
+    .card-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 7px;
+    }
+    .card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .card h4 .card-title-link {
+      text-decoration: none;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      display: inline;
+      transition: color 0.2s ease;
+    }
+    .card h4 .card-title-link:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .card a {
+      font-size: 12px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+    .card a:hover { text-decoration: underline; }
+    /* ── CARD GALLERY ── */
+    .card-gallery {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .card-gallery img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+    .card-gallery img.active {
+      opacity: 1;
+    }
+    /* only show arrows/dots if more than one image */
+    .card-gallery.single .gallery-prev,
+    .card-gallery.single .gallery-next,
+    .card-gallery.single .gallery-dots { display: none; }
+
+    .gallery-prev, .gallery-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(250,247,239,0.82);
+      border: none;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      color: var(--gold);
+      font-size: 13px;
+      line-height: 1;
+      transition: background 0.15s;
+      padding: 0;
+    }
+    .gallery-prev:hover, .gallery-next:hover {
+      background: rgba(250,247,239,0.97);
+    }
+    .gallery-prev { left: 6px; }
+    .gallery-next { right: 6px; }
+
+    .gallery-dots {
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 4px;
+      z-index: 2;
+    }
+    .gallery-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.55);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .gallery-dot.active {
+      background: #fff;
+      transform: scale(1.3);
+    }
+
+
+    /* ── DETAIL TAGS ── */
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+    .tag-icon { font-size: 10px; }
+
+    /* ── RECOMMENDATION SECTION HEADERS ── */
+    .rec-section {
+      margin-bottom: 2.5rem;
+      scroll-margin-top: 80px;
+    }
+    .rec-section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+    .rec-section-header h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    .rec-section-header::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--gold-border);
+    }
+
+    /* ── CATEGORY LEGEND ── */
+    .rec-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 2.5rem;
+      padding: 1rem 1.25rem;
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 12px;
+    }
+    .rec-legend-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      width: 100%;
+      margin-bottom: 2px;
+    }
+    .legend-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: var(--gold-bg);
+      border: 0.5px solid var(--gold-border);
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: all 0.18s;
+    }
+    .legend-link:hover {
+      background: var(--gold-border);
+      color: var(--text);
+    }
+
+    /* ── GIFTS ── */
+    .gift-list { display: grid; gap: 10px; }
+    .gift-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 14px 18px;
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s;
+    }
+    .gift-row:hover { border-color: var(--border-strong); }
+    .gift-name { font-size: 15px; margin-bottom: 3px; }
+    .gift-note { font-size: 12px; color: var(--text-muted); }
+    .gift-badge {
+      flex-shrink: 0;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .gift-badge.available {
+      background: var(--green-bg);
+      border: 0.5px solid var(--green-border);
+      color: var(--green-text);
+    }
+    .gift-badge.taken {
+      background: var(--red-bg);
+      border: 0.5px solid var(--red-border);
+      color: var(--red-text);
+    }
+
+    /* ── HINT BOX ── */
+    .hint-box {
+      margin-top: 2.5rem;
+      padding: 1.25rem 1.5rem;
+      border: 0.5px dashed var(--gold-border);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .hint-box strong { color: var(--gold); font-weight: 400; }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 12px;
+      color: var(--text-light);
+      border-top: 0.5px solid var(--border);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 480px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .gift-row { flex-direction: column; align-items: flex-start; }
+    }
+  /* ── ACCOMMODATION ── */
+    .accom-highlight {
+      background: var(--gold-bg);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 14px;
+      padding: 1.5rem 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .accom-highlight-badge {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .accom-highlight h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .accom-highlight p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .accom-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+    .accom-link:hover { text-decoration: underline; }
+
+    .accom-map-note {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .accom-map-note strong { color: var(--text); font-weight: 400; }
+
+    .accom-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .accom-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+    }
+    @media (max-width: 600px) {
+      .accom-card { grid-template-columns: 1fr; }
+    }
+
+    .accom-card-gallery {
+      position: relative;
+      height: 100%;
+      min-height: 180px;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    @media (max-width: 600px) {
+      .accom-card-gallery { height: 180px; }
+    }
+
+    .accom-card-body {
+      padding: 1.2rem 1.3rem;
+    }
+    .accom-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+    .accom-distance {
+      flex-shrink: 0;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      color: var(--gold);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 2px;
+    }
+    .accom-stats {
+      display: flex;
+      gap: 16px;
+      margin: 10px 0;
+      padding: 10px 0;
+      border-top: 0.5px solid var(--gold-border);
+      border-bottom: 0.5px solid var(--gold-border);
+    }
+    .accom-stat { text-align: center; }
+    .accom-stat-num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .accom-stat-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── SCHEDULE: DAY TABS ── */
+    .day-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 540px) { .day-tabs { grid-template-columns: 1fr; } }
+    .day-tab {
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Jost', sans-serif;
+    }
+    .day-tab:hover { border-color: var(--gold); background: var(--gold-bg); }
+    .day-tab.active { background: var(--gold-bg); border-color: var(--gold); }
+    .day-tab-label { display: block; font-size: 13px; font-weight: 400; color: var(--text); margin-bottom: 2px; }
+    .day-tab-sub { display: block; font-size: 11px; color: var(--text-muted); letter-spacing: 0.03em; }
+    .day-tab.active .day-tab-label { color: var(--gold); }
+
+    .day-block { display: none; }
+    .day-block.visible { display: block; }
+
+    .day-header { border-radius: 14px; margin-bottom: 2rem; overflow: hidden; position: relative; }
+    .day-header-inner { padding: 2rem 1.75rem; position: relative; z-index: 1; }
+    .day-header--friday  { background: linear-gradient(135deg, #2D4A2D 0%, #4A7A4A 60%, #6AAD6A 100%); }
+    .day-header--saturday { background: linear-gradient(135deg, #4A3520 0%, #7A5C35 60%, #B8935A 100%); }
+    .day-header--sunday  { background: linear-gradient(135deg, #1A3040 0%, #2A5070 60%, #5A8FAA 100%); }
+    .day-header-eyebrow { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 6px; }
+    .day-header-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; font-style: italic; color: #fff; margin-bottom: 4px; line-height: 1.1; }
+    .day-header-sub { font-size: 13px; color: rgba(255,255,255,0.72); font-weight: 300; }
+
+    .tl-dot--highlight { background: #B8935A; width: 16px; height: 16px; left: calc(-1.75rem - 1px); top: 4px; box-shadow: 0 0 0 3px rgba(184,147,90,0.25); }
+
+    .activity-groups { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+    .activity-group { background: var(--warm-white); border: 0.5px solid var(--gold-border); border-radius: 8px; padding: 8px 12px; }
+    .activity-group-label { font-size: 11px; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 3px; font-weight: 400; }
+    .activity-group-items { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── TRAVEL ── */
+    .travel-step { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: flex-start; }
+    .travel-step-num {
+      flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--gold-bg); border: 0.5px solid var(--gold-border);
+      color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 18px;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .travel-step-body { flex: 1; }
+    .travel-step-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 6px; }
+    .travel-step-body p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+    .travel-option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+    @media (max-width: 540px) { .travel-option-grid { grid-template-columns: 1fr; } }
+    .travel-option { display: flex; gap: 10px; background: var(--card-bg); border: 0.5px solid var(--gold-border); border-radius: 10px; padding: 12px 14px; }
+    .travel-option-icon { font-size: 20px; flex-shrink: 0; line-height: 1.3; }
+    .travel-option-title { font-size: 14px; font-weight: 400; color: var(--text); margin-bottom: 3px; }
+    .travel-option-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 5px; }
+    .travel-option-price { font-size: 11px; color: var(--gold); letter-spacing: 0.03em; font-style: italic; }
+
+    /* ── NEIGHBOURHOODS ── */
+    .neighbourhood-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+    .neighbourhood-card { background: var(--card-bg); border: 0.5px solid var(--gold-border); border-radius: 12px; padding: 1.1rem 1.2rem; }
+    .neighbourhood-card--caution { border-color: #DCC0B8; background: #FDF8F7; }
+    .neighbourhood-emoji { font-size: 22px; margin-bottom: 6px; }
+    .neighbourhood-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; margin-bottom: 4px; }
+    .neighbourhood-vibe { display: inline-block; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+    .vibe--glam  { background: #F5EEF5; color: #7A3A7A; border: 0.5px solid #DCC8DC; }
+    .vibe--surf  { background: #EAF2F5; color: #2A5A7A; border: 0.5px solid #B8D4DC; }
+    .vibe--quiet { background: var(--gold-bg); color: var(--gold); border: 0.5px solid var(--gold-border); }
+    .vibe--rough { background: #F5EDEA; color: #7A3A2A; border: 0.5px solid var(--red-border); }
+    .vibe--new {background: #FFF8E8; color: #9A6A00; border: 0.5px solid #E8D18A;}
+    .neighbourhood-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── MAP ── */
+    #accom-map {
+      width: 100%;
+      height: 360px;
+      border-radius: 14px;
+      border: 0.5px solid var(--gold-border);
+      overflow: hidden;
+      z-index: 0;
+    }
+    .map-popup {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 1.5;
+      min-width: 160px;
+    }
+    .map-popup strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 2px;
+      color: #1C1C16;
+    }
+    .map-popup .map-popup-detail {
+      color: #6E7A64;
+      font-size: 12px;
+    }
+    .map-popup a {
+      color: #5E8E5E;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    .map-popup a:hover { text-decoration: underline; }
+
+    /* ── BUTTON ── */
+    .btn-primary {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 10px 22px;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover { background: #4A7A4A; transform: translateY(-1px); }
+
+    /* ── HONEYMOON FUND / GIFTS ── */
+    .honeymoon-card {
+      display: flex;
+      gap: 1.5rem;
+      background: var(--card-bg);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .qr-box { flex-shrink: 0; width: 150px; text-align: center; }
+    .qr-box img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px dashed var(--gold-border);
+      background: #fff;
+      padding: 8px;
+      display: block;
+    }
+    .qr-caption {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .bank-details { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 10px; }
+    .bank-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-bottom: 8px; border-bottom: 0.5px solid var(--gold-border); }
+    .bank-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .bank-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .bank-value { font-size: 14px; color: var(--text); font-family: 'Jost', sans-serif; flex: 1; text-align: right; word-break: break-word; }
+    .copy-btn {
+      flex-shrink: 0;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 0.5px solid var(--gold-border);
+      background: var(--gold-bg);
+      color: var(--gold);
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      transition: all 0.15s;
+    }
+    .copy-btn:hover { background: var(--gold-border); }
+    .copy-btn.copied { background: var(--green-bg); border-color: var(--green-border); color: var(--green-text); }
+    .qr-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 0.9rem; font-style: italic; }
+    @media (max-width: 480px) {
+      .honeymoon-card { flex-direction: column; }
+      .bank-value { text-align: left; }
+    }
+
+    /* ── DRESSCODE ── */
+    .dress-tabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 1.75rem; }
+    @media (max-width: 480px) { .dress-tabs { grid-template-columns: 1fr; } }
+    .dress-tab {
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Jost', sans-serif;
+    }
+    .dress-tab:hover { border-color: var(--gold); background: var(--gold-bg); }
+    .dress-tab.active { background: var(--gold-bg); border-color: var(--gold); }
+    .dress-tab.active .day-tab-label { color: var(--gold); }
+    .dress-block { display: none; }
+    .dress-block.visible { display: block; }
+    .dress-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 1.25rem; align-items: start; }
+.dress-item { border-radius: 12px; overflow: hidden; border: 0.5px solid var(--gold-border); background: var(--card-bg); }
+.dress-item img { width: 100%; height: auto; display: block; }
+    .dress-item-label { font-size: 12px; text-align: center; padding: 8px 6px; color: var(--text-muted); letter-spacing: 0.02em; }
+    .dress-list { list-style: none; margin-top: 1.2rem; display: flex; flex-direction: column; gap: 10px; }
+    .dress-list li { position: relative; padding-left: 22px; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .dress-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-light); }
+    .dress-list li strong { color: var(--text); font-weight: 400; }
+
+    /* ── GALLERY / COLLAGE ── */
+    .photo-collage {
+      column-count: 3;
+      column-gap: 12px;
+    }
+    @media (max-width: 700px) { .photo-collage { column-count: 2; } }
+    @media (max-width: 420px) { .photo-collage { column-count: 1; } }
+    .collage-item {
+      margin-bottom: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 0.5px solid var(--gold-border);
+      break-inside: avoid;
+    }
+    .collage-item img {
+      width: 100%;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .collage-item img:hover { transform: scale(1.03); filter: brightness(0.96); }
+
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28,22,16,0.88);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox-overlay.visible { display: flex; }
+    .lightbox-overlay img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: rgba(255,255,255,0.12);
+      border: none;
+      color: #fff;
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.22); }
+
+    /* ── COLOUR PALETTE ── */
+    .palette-card {
+      background: var(--warm-white);
+      border: 0.5px solid var(--gold-border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .palette-card-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .palette-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .palette-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .palette-swatches { display: flex; flex-wrap: wrap; gap: 16px; }
+    .palette-swatch { text-align: center; }
+    .palette-swatch-color {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      margin: 0 auto 6px;
+      border: 0.5px solid rgba(0,0,0,0.08);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .palette-swatch-label {
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+</style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">You are warmly invited to the wedding of</p>
+      <h1 class="hero-names">Madelief <span class="hero-ampersand">&</span> Johan</h1>
+      <p class="hero-subtitle">and join us in our next chapter: 'Lief en Lammers are getting married'</p>
+      <p class="hero-date">8-10 January 2027 &nbsp;·&nbsp; Winelands, South Africa</p>
+      <span class="hero-venue">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6.5" cy="5.5" r="2.5" stroke="#5E8E5E" stroke-width="1"/>
+          <path d="M6.5 13C6.5 13 1 8.8 1 5.5a5.5 5.5 0 0 1 11 0C12 8.8 6.5 13 6.5 13z" stroke="#5E8E5E" stroke-width="1" fill="none"/>
+        </svg>
+        Vrede &amp; Lust Wine Estate
+      </span>
+      <div class="hero-divider"></div>
+    </div>
+  </header>
+
+  <nav class="nav-wrapper">
+    <div class="nav">
+      <button class="nav-btn active" onclick="showPage('schedule', this)">Schedule</button>
+      <button class="nav-btn" onclick="showPage('travel', this)">Travel</button>
+      <button class="nav-btn" onclick="showPage('accommodation', this)">Accommodation</button>
+      <button class="nav-btn" onclick="showPage('recommendations', this)">Recommendations</button>
+      <button class="nav-btn" onclick="showPage('gifts', this)">Gift ideas</button>
+      <button class="nav-btn" onclick="showPage('dresscode', this)">Dresscode</button>
+      <button class="nav-btn" onclick="showPage('contact', this)">Contact &amp; RSVP</button>
+      <button class="nav-btn" onclick="showPage('gallery', this)">Gallery</button>
+    </div>
+  </nav>
+
+  <!-- SCHEDULE -->
+  <main id="schedule" class="page visible">
+    <div class="container">
+      <p class="section-eyebrow">8 – 10 January 2027</p>
+      <h2 class="section-title">The full weekend</h2>
+      <p class="section-sub">All events take place at Vrede &amp; Lust Wine Estate. We can't wait to share this weekend with you!</p>
+
+      <!-- DAY TABS -->
+      <div class="day-tabs">
+        <button class="day-tab active" onclick="showDay('friday', this)">
+          <span class="day-tab-label">Friday 8 Jan</span>
+          <span class="day-tab-sub">Arrival &amp; pre-event</span>
+        </button>
+        <button class="day-tab" onclick="showDay('saturday', this)">
+          <span class="day-tab-label">Saturday 9 Jan</span>
+          <span class="day-tab-sub">Wedding day</span>
+        </button>
+        <button class="day-tab" onclick="showDay('sunday', this)">
+          <span class="day-tab-label">Sunday 10 Jan</span>
+          <span class="day-tab-sub">The morning after</span>
+        </button>
+      </div>
+
+      <!-- FRIDAY -->
+      <div class="day-block visible" id="day-friday">
+        <div class="day-header day-header--friday">
+          <div class="day-header-inner">
+            <div class="day-header-eyebrow">Friday · 8 January</div>
+            <div class="day-header-title">Day of arrival &amp; pre-event</div>
+            <div class="day-header-sub">Settle in, make new friends, and enjoy the Winelands at its finest</div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">15:00</div>
+            <div class="tl-event">Check-in</div>
+            <div class="tl-note">Everyone is welcome at V&amp;L from 15:00 onwards. Drop your bags and settle in. For guests staying in one of the other pre-booked accommodations, you will be informed separately about the check-in details, but we are also looking forward to seeing you at V&amp;L after check-in as well!</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">15:30 – 19:00</div>
+            <div class="tl-event">Pool party, lawn sports &amp; wine tasting</div>
+            <div class="tl-note">The afternoon is yours — jump in the pool, grab a drink, and get to know your fellow guests over lawn sports. The wine tasting is served until 5pm.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">17:00</div>
+            <div class="tl-event">Welcome speech</div>
+            <div class="tl-note">A warm welcome from the family to open the weekend together.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">18:00 – 22:00</div>
+            <div class="tl-event">Braai &amp; mix and mingle</div>
+            <div class="tl-note">A proper South African braai under the stars. Meet your new friends over great food and wine!</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">22:00 – 00:00</div>
+            <div class="tl-event">Afterparty</div>
+            <div class="tl-note">For those who aren't ready to call it a night — the party continues at the Savoye House!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SATURDAY -->
+      <div class="day-block" id="day-saturday">
+        <div class="day-header day-header--saturday">
+          <div class="day-header-inner">
+            <div class="day-header-eyebrow">Saturday · 9 January</div>
+            <div class="day-header-title">The wedding day</div>
+            <div class="day-header-sub">The day we've been looking forward to — we do!</div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">07:30 – 10:30</div>
+            <div class="tl-event">Breakfast at Vrede &amp; Lust</div>
+            <div class="tl-note">Breakfast is served in time slots for all guests, including those staying at nearby accommodations. Please also see the RSVP.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">11:00 – 14:30</div>
+            <div class="tl-event">Free time &amp; activities</div>
+            <div class="tl-note">
+              We have a couple of options for morning activities. Choose your own adventure:
+              <div class="activity-groups">
+                <div class="activity-group">
+                  <div class="activity-group-label">📋 Sign up in advance</div>
+                  <div class="activity-group-items">Horse riding · Quad biking · VNL wine tasting (smaller groups, walk-in, max 20–24 per table)</div>
+                </div>
+                <div class="activity-group">
+                  <div class="activity-group-label">🥾 Do it yourself</div>
+                  <div class="activity-group-items">Hike the trails · Visit nearby wine farms · Self-guided tour of VNL</div>
+                </div>
+                <div class="activity-group">
+                  <div class="activity-group-label">🏊 On-site</div>
+                  <div class="activity-group-items">Swimming · Lawn sports</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">12:00 – 14:00</div>
+            <div class="tl-event">Lunch</div>
+            <div class="tl-note">A bagged lunch will be prepared for all guests to retrieve after breakfast. Eat at your own pace between activities.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot tl-dot--highlight"></div>
+            <div class="tl-time">14:30 – 16:00</div>
+            <div class="tl-event">Get ready! 💃</div>
+            <div class="tl-note">Time to freshen up, get dressed, and prepare for the big moment. Have a look at the Dresscode section for inspiration. Guests staying off-site are welcome to get ready on the estate, we will help coordinate spaces with those staying at Vrede &amp; Lust.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot tl-dot--highlight"></div>
+            <div class="tl-time">16:00</div>
+            <div class="tl-event">Ceremony 💒</div>
+            <div class="tl-note">The ceremony takes place in the ceremony lawn. Seating is outdoors, with the beautiful backdrop of Cape Dutch houses and mountain range. It will still be quite warm (~25°C), but small parasols will be available!</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">17:00 – 19:00</div>
+            <div class="tl-event">Garden party — toast, drinks &amp; canapés</div>
+            <div class="tl-note">Celebrate with a glass of bubbles in the vineyard. Mingle, take photos with the newlyweds, and enjoy canapés in the golden afternoon light.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">19:00</div>
+            <div class="tl-event">Dinner</div>
+            <div class="tl-note">A long-table dinner in front of the mountain range.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">21:00 - 01:00</div>
+            <div class="tl-event">Party! 🎉</div>
+            <div class="tl-note">The dance floor is open! For guests who cannot get enough, afterparty at Savoye House will be possible until 4am (bring drinks that are ordered before 1am).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUNDAY -->
+      <div class="day-block" id="day-sunday">
+        <div class="day-header day-header--sunday">
+          <div class="day-header-inner">
+            <div class="day-header-eyebrow">Sunday · 10 January</div>
+            <div class="day-header-title">The day after</div>
+            <div class="day-header-sub">A gentle farewell — coffee, croissants, and good memories.</div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">07:30 – 10:30</div>
+            <div class="tl-event">Farewell breakfast</div>
+            <div class="tl-note">One last breakfast together on the estate. The same time slot system will apply as to make it feasible for the Savoye kitchen.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Before 11:00</div>
+            <div class="tl-event">Check-out</div>
+            <div class="tl-note">All rooms to be checked out by 11:00. Safe travels — and thank you for sharing this weekend with us.💚</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- TRAVEL -->
+  <main id="travel" class="page">
+    <div class="container">
+      <p class="section-eyebrow">Getting there</p>
+      <h2 class="section-title">Travel</h2>
+      <p class="section-sub">All roads lead to Vrede en Lust!</p>
+
+      <!-- STEP 1: FLY -->
+      <div class="travel-step">
+        <div class="travel-step-num">1</div>
+        <div class="travel-step-body">
+          <div class="section-eyebrow">Step one</div>
+          <h3 class="travel-step-title">Fly into Cape Town (CPT)</h3>
+          <p>Amsterdam has daily direct ~11 hr flights arriving ~21:30 local; alternatively connecting flights via Doha, Dubai, Addis Abbaba or London. <strong>Book well in advance and consider when before / after Christmas and New Years you fly</strong> — January is peak summer season in South Africa. KLM also frequently has worthwile promotions for Cape Town (Real Deal Days or Airmiles redemption deals), so stay in the loop for those! Alternatively, if you want to do safari while in South Africa, consider flying through Johannesburg on the east of South Africa!</p>
+          <div class="card-tags" style="margin-top: 10px;">
+            <span class="tag"><span class="tag-icon">✈️</span> Cape Town Intl (CPT)</span>
+            <span class="tag"><span class="tag-icon">📅</span> Book early — high season</span>
+            <span class="tag"><span class="tag-icon">🕐</span> ~11 hr from Amsterdam direct flight</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: DECIDE YOUR MODE OF TRAVEL -->
+      <div class="travel-step">
+        <div class="travel-step-num">2</div>
+        <div class="travel-step-body">
+          <div class="section-eyebrow">Step two</div>
+          <h3 class="travel-step-title">Decide your mode of travel</h3>
+          <p>Travel in South Africa is predominantly car-based. Some buses exist but we never use them. Uber is reliable and affordable, especially around Cape Town. If you expect to move around more or go beyond the city, we recommend you hire a car at the airport.</p>
+          <div class="travel-option-grid">
+            <div class="travel-option">
+              <div class="travel-option-icon">🚕</div>
+              <div>
+                <div class="travel-option-title">Uber</div>
+                <div class="travel-option-desc">Reliable and cheap. Uber works well throughout the Cape Town area, incl. Constantia and the even the winelands with some patience.</div>
+                <div class="travel-option-price">~R150–250 airport → city centre</div>
+              </div>
+            </div>
+            <div class="travel-option">
+              <div class="travel-option-icon">🚗</div>
+              <div>
+                <div class="travel-option-title">Hire a car</div>
+                <div class="travel-option-desc">Great if you're planning a road trip, travelling in a group, or want the freedom to explore South at your own pace. All major rental companies are at the airport. The most budget friendly option in town we know is Rent A Cheapie.</div>
+                <div class="travel-option-price">~R300-600 per diem, excl. fuel, extra coverage, extra kilometers.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: TO THE VENUE -->
+      <div class="travel-step">
+        <div class="travel-step-num">3</div>
+        <div class="travel-step-body">
+          <div class="section-eyebrow">Step three</div>
+          <h3 class="travel-step-title">From Cape Town to the venue</h3>
+          <p>Vrede &amp; Lust is about 55km / 45 min from the airport, or 75 km / 1hr from Cape Town city center. Take the N2 and R45 through the Winelands to Stellenbosch, then Franschhoek. Alternatively, it's 20km / 25 min from Stellenbosch or 12km/ 20 min from Paarl via R45. Vrede en Lust is well signposted. There is plenty of parking at the estate and the nearby other accomodations. From the VNL parking lot, it's 300 m to the reserved part of the estate in the back behind the bistro and tasting room. If you do not have a car, Uber will also take you there for ~R400-500.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- WHERE TO STAY IN CAPE TOWN -->
+      <p class="section-eyebrow">Before and/or after the wedding</p>
+      <h2 class="section-title" style="font-size: 26px;">Where to stay in Cape Town</h2>
+      <p class="section-sub">We can recommend reserving some time before or after the wedding to experience all the Mother City has to offer! You don't need to stay in city center since Uber is readily available, so here are some neighbourhood / area options depending on your vibe.</p>
+
+      <div class="neighbourhood-grid">
+        <div class="neighbourhood-card">
+          <div class="neighbourhood-emoji">🌊</div>
+          <div class="neighbourhood-name">Camps Bay & Clifton Beach</div>
+          <div class="neighbourhood-vibe vibe--glam">Beachside nightlife & villa apartments</div>
+          <p>The glamorous strip along the Atlantic coast — beautiful beach, restaurants, and bars with mountain views. It's lively and upscale; arguably also the most yuppy, attracting the well-off visitor more than the backpacker.</p>
+        </div>
+        <div class="neighbourhood-card">
+          <div class="neighbourhood-emoji">🏄</div>
+          <div class="neighbourhood-name">Tableview</div>
+          <div class="neighbourhood-vibe vibe--surf">Watersports valhalla</div>
+          <p>Where Madelief's dad lives - specifically, near the Dolphin Beach Hotel! A relaxed residential neighbourhood along Table Bay, popular with experienced (kite)surfers for its consistent winds. To get into surfing, go towards Langebaan or Muizenberg. Great if you want a local, less touristy experience.</p>
+        </div>
+        <div class="neighbourhood-card">
+          <div class="neighbourhood-emoji">🌳</div>
+          <div class="neighbourhood-name">Gardens</div>
+          <div class="neighbourhood-vibe vibe--quiet">Leafy &amp; central</div>
+          <p>A pleasant, safe, a bit quieter neighbourhood on the slopes of Table Mountain. Good mix of guesthouses and apartments; close to plenty bars and restaurant around Kloof Street.</p>
+        </div>
+        <div class="neighbourhood-card">
+          <div class="neighbourhood-emoji">🎨</div>
+          <div class="neighbourhood-name">Woodstock & Observatory</div>
+          <div class="neighbourhood-vibe vibe--rough">Edgy — nightlife</div>
+          <p>A creative, up-and-coming area with cool cafés and street art. A lot of students live here, but parts of it can feel rough, especially at night (please take ubers after dark). Ideal if you want to be near the nightlife, but not our top recommendation for guests looking for a more family-friendly holiday in the Cape Town area.</p>
+        </div>
+        <div class="neighbourhood-card">
+          <div class="neighbourhood-emoji">🏠</div>
+          <div class="neighbourhood-name">Greenpoint</div>
+          <div class="neighbourhood-vibe vibe--new">Seaside urban</div>
+          <p>Recently a hotspot for digital nomads. Plenty apartments, and facilites next to the beaches of the Camps and Clifton; under Lion's Head for hikes, and near the stadium and Waterfront for entertainment.</p>
+        </div>
+      </div>
+
+      <div class="hint-box">
+        Alternatively, have a look in some areas around the city as you'll be travelling by car anyway. We heard great reviews from Houtbaai (villas for with kids), Muizenberg (beginner surfing) or Constantia (near some excellent wineries and restaurants, more suburban). Prioritise a place you like the look of — you won't be stuck there!
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ACCOMMODATION -->
+  <main id="accommodation" class="page">
+    <div class="container">
+      <p class="section-eyebrow">Where to stay</p>
+      <h2 class="section-title">Accommodation</h2>
+      <p class="section-sub">We have arranged accommodation for all our guests. 40 guests will be staying on the estate itself — the rest are just minutes away. Shuttle buses will run after the party, and Uber is very affordable in the area.</p>
+
+      <!-- ON-SITE -->
+      <div class="accom-highlight">
+        <div class="accom-highlight-badge">🍇 On the estate</div>
+        <h3>Vrede &amp; Lust Wine Estate</h3>
+        <p>40 guests will be staying right on site — wake up surrounded by vineyards and mountains, steps from the wedding.</p>
+        <a href="http://www.vnl.co.za/" target="_blank" class="accom-link">→ vnl.co.za</a>
+      </div>
+
+      <!-- MAP EMBED NOTE -->
+      <div class="accom-map-note">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="6" r="3" stroke="#5E8E5E" stroke-width="1"/><path d="M7 14C7 14 1 9.5 1 6a6 6 0 0 1 12 0C13 9.5 7 14 7 14z" stroke="#5E8E5E" stroke-width="1" fill="none"/></svg>
+        All three nearby accommodations are within <strong>2 km</strong> of the venue
+      </div>
+
+      <div class="divider"></div>
+      <p class="section-eyebrow">Nearby accommodations</p>
+      <h2 class="section-title" style="font-size: 26px;">Just down the road</h2>
+      <p class="section-sub">These are <strong>already reserved</strong> for our guests!</p>
+
+      <div class="accom-list">
+
+        <!-- PADDABULT -->
+        <div class="accom-card">
+          <div class="accom-card-gallery card-gallery" data-index="0">
+            <img src="images/paddabult1.jpg" alt="Paddabult Cottages" class="active" />
+            <img src="images/paddabult2.jpg" alt="Paddabult interior" />
+            <img src="images/paddabult3.jpg" alt="Paddabult garden" />
+            <img src="images/paddabult4.jpg" alt="Paddabult garden" />
+            <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+            <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+            <div class="gallery-dots"></div>
+          </div>
+          <div class="accom-card-body">
+            <div class="accom-card-header">
+              <div>
+                <div class="card-label">Self-catered apartments</div>
+                <h4><a href="https://www.paddabult.com/" target="_blank" class="card-title-link">Paddabult Cottages</a></h4>
+              </div>
+              <div class="accom-distance">2 km</div>
+            </div>
+            <p>Six spacious 4-person self-catered apartments in a peaceful setting just outside Franschhoek. Perfect for groups or families who want their own space and kitchen.</p>
+            <div class="accom-stats">
+              <div class="accom-stat"><span class="accom-stat-num">24</span><span class="accom-stat-label">guests</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">6</span><span class="accom-stat-label">apartments</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">4</span><span class="accom-stat-label">per unit</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">👫</span> Family-friendly</span>
+              <span class="tag"><span class="tag-icon">🚗</span> 2 km to venue</span>
+            </div>
+            <a href="https://www.paddabult.com/" target="_blank" class="accom-link">→ paddabult.com</a>
+          </div>
+        </div>
+
+        <!-- STATION HOUSE -->
+        <div class="accom-card">
+          <div class="accom-card-gallery card-gallery" data-index="0">
+            <img src="images/stationhouse.jpg" alt="Station House" class="active" />
+            <img src="images/stationhouse2.jpg" alt="Paddabult garden" />
+            <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+            <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+            <div class="gallery-dots"></div>
+          </div>
+          <div class="accom-card-body">
+            <div class="accom-card-header">
+              <div>
+                <div class="card-label">Guesthouse</div>
+                <h4><a href="http://www.stationhouse.co.za/" target="_blank" class="card-title-link">Station House</a></h4>
+              </div>
+              <div class="accom-distance">500 m</div>
+            </div>
+            <p>Once the humble abode of the station master, this charming guest house is one of the last remnants of a train station long forgotten. Just around the corner of Vrede &amp; Lust.</p>
+            <div class="accom-stats">
+              <div class="accom-stat"><span class="accom-stat-num">14</span><span class="accom-stat-label">guests</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">7</span><span class="accom-stat-label">rooms</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">2</span><span class="accom-stat-label">per room</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🏛️</span> Historic building</span>
+              <span class="tag"><span class="tag-icon">🚶</span> 500 m to venue</span>
+              <span class="tag"><span class="tag-icon">🏊</span> Pool</span>
+            </div>
+            <a href="http://www.stationhouse.co.za/" target="_blank" class="accom-link">→ stationhouse.co.za</a>
+          </div>
+        </div>
+
+        <!-- KIMI'S COTTAGE -->
+        <div class="accom-card">
+            <div class="accom-card-gallery card-gallery" data-index="0">
+            <img src="images/kimicottage1.jpg" alt="Kimi's Cottage" class="active" />
+            <img src="images/kimicottage2.jpg" alt="Kimi's Cottage" />
+            <img src="images/kimicottage3.jpg" alt="Kimi's Cottage" />
+            <img src="images/kimicottage4.jpg" alt="Kimi's Cottage" />
+            <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+            <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+            <div class="gallery-dots"></div>
+          </div>
+          <div class="accom-card-body">
+            <div class="accom-card-header">
+              <div>
+                <div class="card-label">Cottage</div>
+                <h4><a href="https://www.booking.com/hotel/za/kimi-39-s-cottage.en-gb.html" target="_blank" class="card-title-link">Kimi's Cottage</a></h4>
+              </div>
+              <div class="accom-distance">500 m</div>
+            </div>
+            <p>A cosy, highly-rated cottage right next to Station House and near Vrede & Lust. Kimi is a wonderful host, guests love the personal touch and peaceful setting.</p>
+            <div class="accom-stats">
+              <div class="accom-stat"><span class="accom-stat-num">4</span><span class="accom-stat-label">guests</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">2</span><span class="accom-stat-label">rooms</span></div>
+              <div class="accom-stat"><span class="accom-stat-num">2</span><span class="accom-stat-label">per room</span></div>
+            </div>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🏡</span> Cosy cottage</span>
+              <span class="tag"><span class="tag-icon">🚶</span> 500 m to venue</span>
+            </div>
+            <a href="https://www.booking.com/hotel/za/kimi-39-s-cottage.en-gb.html" target="_blank" class="accom-link">→ Check out the venue</a>
+          </div>
+        </div>
+
+      </div><!-- end accom-list -->
+
+      <!-- MAP -->
+      <div class="divider"></div>
+      <p class="section-eyebrow">Overview</p>
+      <h2 class="section-title" style="font-size: 26px;">All locations on the map</h2>
+      <p class="section-sub" style="margin-bottom: 1rem;">Click any pin for more details. Everything is within 2 km of the venue.</p>
+      <div id="accom-map"></div>
+
+      <!-- SHUTTLE NOTE -->
+      <div class="hint-box" style="margin-top: 2rem;">
+        🚌 <strong>Don't worry about the ride home.</strong> We will organise shuttle buses after the party for all nearby accommodations. Uber is also very affordable in the area — around €2–4 for a short trip.
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RECOMMENDATIONS -->
+  <main id="recommendations" class="page">
+    <div class="container">
+      <p class="section-eyebrow">Our favourites</p>
+      <h2 class="section-title">Recommendations</h2>
+      <p class="section-sub">Some of the places and experiences we love most in the area — tried and tested by us!</p>
+
+      <!-- LEGEND -->
+      <div class="rec-legend">
+        <span class="rec-legend-label">Jump to</span>
+        <a class="legend-link" href="#rec-restaurants">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 1v4a2 2 0 0 0 4 0V1M5 5v6" stroke="#5E8E5E" stroke-width="1" stroke-linecap="round"/></svg>
+          Restaurants &amp; bars
+        </a>
+        <a class="legend-link" href="#rec-hikes">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10 L4 5 L6 7 L8 3 L11 10" stroke="#5E8E5E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          Hikes
+        </a>
+        <a class="legend-link" href="#rec-capetown">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="5" r="2" stroke="#5E8E5E" stroke-width="1"/><path d="M6 11C6 11 1 7.5 1 5a5 5 0 0 1 10 0C11 7.5 6 11 6 11z" stroke="#5E8E5E" stroke-width="1" fill="none"/></svg>
+          Activities Cape Town
+        </a>
+        <a class="legend-link" href="#rec-franschhoek">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="5" r="2" stroke="#5E8E5E" stroke-width="1"/><path d="M6 11C6 11 1 7.5 1 5a5 5 0 0 1 10 0C11 7.5 6 11 6 11z" stroke="#5E8E5E" stroke-width="1" fill="none"/></svg>
+          Franschhoek &amp; Stellenbosch
+        </a>
+        <a class="legend-link" href="#rec-roadtrips">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="5" r="2" stroke="#5E8E5E" stroke-width="1"/><path d="M6 11C6 11 1 7.5 1 5a5 5 0 0 1 10 0C11 7.5 6 11 6 11z" stroke="#5E8E5E" stroke-width="1" fill="none"/></svg>
+          Road trips
+        </a>
+      </div>
+
+      <!-- RESTAURANTS & BARS -->
+      <div class="rec-section" id="rec-restaurants">
+        <div class="rec-section-header">
+          <h3>Restaurants</h3>
+        </div>
+        <div class="card-grid">
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/kloofstreet.jpeg" alt="Kloof Street House" class="active" />
+              <img src="images/kloofstreet2.jpeg" alt="Kloof Street House 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+            
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://www.kloofstreethouse.co.za" target="_blank" class="card-title-link">Kloof Street House</a></h4>
+            <p>One of our favorite restaurants in town. Be sure to make your reservation 1-2 months in advance.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 1-2 months ahead</span>
+            </div>
+          </div>
+          
+          <div class="card">
+                <div class="card-gallery" data-index="0">
+              <img src="images/gigirooftop.jpeg" alt="Gigi Gorgeous George" class="active" />
+              <img src="images/gigirooftop2.jpeg" alt="Gigi Gorgeous George 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+               </div>
+               
+            <div class="card-label">Rooftop bar</div>
+            <h4><a href="https://www.gigirooftop.com" target="_blank" class="card-title-link">Gigi Gorgeous George</a></h4>
+            <p>Gigi rooftop bar is right in the city center, part of the 18th century design hotel Gorgeous George. Perfect for a short scenic stop and cocktails.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">🌇</span> Rooftop views</span>
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/truthcoffee.jpeg" alt="Truth Cafè" class="active" />
+              <img src="images/truthcoffee2.jpeg" alt="Truth Cafe 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Café</div>
+            <h4><a href="https://www.google.com/maps/place/Truth+Coffee+Roasting/@-33.9283384,18.4227736,17z/data=!4m15!1m8!3m7!1s0x1dcc677c90fa4f93:0xfb23b9d5b59813f6!2sTruth+Coffee+Roasting!8m2!3d-33.92819!4d18.4226889!10e5!16s%2Fg%2F1v560vhs!3m5!1s0x1dcc677c90fa4f93:0xfb23b9d5b59813f6!8m2!3d-33.92819!4d18.4226889!16s%2Fg%2F1v560vhs?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Truth Coffee</a></h4>
+            <p>Grab a lunch and/or coffee at this stylish steampunk coffee house!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon"> ☕️ </span> Coffee/lunch</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/consciouskitchen.jpeg" alt="The Conscious Kitchen" class="active" />
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Café</div>
+            <h4><a href="https://www.google.com/maps/place/The+Conscious+Kitchen+-+Kloof+Street/@-33.9288285,18.4090897,17z/data=!3m1!4b1!4m6!3m5!1s0x1dcc67e5d9da47b9:0x1338def64d211c11!8m2!3d-33.9288285!4d18.4116646!16s%2Fg%2F11j7vcnys0?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">The Conscious Kitchen</a></h4>
+            <p>Our favorite spot for vegan and 'conscious' lunch, with only local and organic produce! Recommend after your morning Lion's Head hike!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon"> 🥑 </span> Vegan </span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/potluck4.jpeg" alt="The Pot Luck Club" class="active" />
+              <img src="images/potluck2.jpeg" alt="The Pot Luck Club 2" />
+              <img src="images/potluck5.jpeg" alt="The Pot Luck Club 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://thepotluckclub.co.za/home/" target="_blank" class="card-title-link">The Pot Luck Club</a></h4>
+            <p>Very nice restaurant with great cocktails right above the Neighborgoods market situated in Woodstock area! Be sure to make a reservation a few weeks in advance.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 1-2 months ahead</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/colombe6.jpeg" alt="Colombe" class="active" />
+              <img src="images/colombe5.jpeg" alt="Colombe2"/>
+              <img src="images/colombe3.jpeg" alt="Colombe3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://www.lacolombe.restaurant/la-colombe" target="_blank" class="card-title-link">La Colombe</a></h4>
+            <p>High-end fine dining restaurant, experimental fusion cuisine in Constantia. We had an amazing multi-course meal, be sure to come with an apetite :)</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Constantia</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 3 months ahead</span>
+              <span class="tag"><span class="tag-icon">🍷</span> Fine dining</span>
+            </div>
+          </div>
+          
+            <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/salsify8.jpeg" alt="Colombe" class="active" />
+              <img src="images/salsify7.jpeg" alt="Colombe2"/>
+              <img src="images/salsify5.jpeg" alt="Colombe3" />
+              <img src="images/salsify2.jpeg" alt="Colombe3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://salsify.co.za/" target="_blank" class="card-title-link">Salsify</a></h4>
+            <p>Very nice fine dining restaurant near Cape Town. This is an old mountain-side hunting lodge turned restaurant, includes a welcome ceremony and views overlooking Camps Bay.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Camps Bay</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 2-3 months ahead</span>
+              <span class="tag"><span class="tag-icon">🍷</span> Fine dining</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/jonkershuis.jpeg" alt="Jonkershuis" class="active" />
+              <img src="images/jonkershuis2.jpeg" alt="Jonkershuis2"/>
+              <img src="images/jonkershuis3.jpeg" alt="Jonkershuis3"/>
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://jonkershuisconstantia.co.za/" target="_blank" class="card-title-link">Jonkershuis</a></h4>
+            <p>A nice spot for lunch in beautiful Cape Dutch architecture next to the wine ranks. Small pond with ducks for kids in the back. Great terrace for lunch to spend a sunny afternoon.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Constantia</span>
+              <span class="tag"><span class="tag-icon">🌞</span> Terrace </span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/constantiaglen4.jpeg" alt="Constantia Glen" class="active" />
+              <img src="images/constantiaglen3.jpeg" alt="Constantia Glen 2"/>
+              <img src="images/constantiaglen2.jpeg" alt="Constantia Glen 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://eu.constantiaglen.com/" target="_blank" class="card-title-link">Constantia Glen</a></h4>
+            <p>This is the place that inspired us to do the Cape Town wedding. Beautiful views of the Constantia Nek, perfect golden hour and great wine tastings. A staple to visit every time we are in Cape Town.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Constantia</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 2 months ahead</span>
+              <span class="tag"><span class="tag-icon">🍷</span> Wine tasting</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/delair1.jpeg" alt="Delair" class="active" />
+              <img src="images/delair2.jpeg" alt="Delair 2"/>
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Restaurant</div>
+            <h4><a href="https://www.delaire.co.za/nl/" target="_blank" class="card-title-link">Delaire Graff Estate</a></h4>
+            <p>About 1.5 hours outside Cape Town, near Stellenbosch, you’ll find this beautiful fine dining spot in the heart of the winelands. Expect a memorable multi-course dinner with excellent wine pairings and stunning vineyard views.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Stellenbosch</span>
+              <span class="tag"><span class="tag-icon">📆</span> Book 1-2 months ahead</span>
+              <span class="tag"><span class="tag-icon">🍷</span> Fine dining</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- HIKES -->
+      <div class="rec-section" id="rec-hikes">
+        <div class="rec-section-header">
+          <h3>Hikes</h3>
+        </div>
+        <div class="card-grid">
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/skeletongorge.jpeg" alt="Skeleton Gorge" class="active" />
+              <img src="images/skeletongorge2.jpeg" alt="Skeleton Gorge" />
+              <img src="images/skeletongorge3.jpeg" alt="Skeleton Gorge" />
+              <img src="images/skeletongorge4.jpeg" alt="Skeleton Gorge" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Skeleton Gorge - Table Mountain</h4>
+            <p>Hike up table mountain through the Skeleton Gorge route, which starts at Kirstenbosch. When you reached the top, you have several options for the route down, one of which is walking across the top (1hr) to the cable car.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 30–40 min drive</span>
+              <span class="tag"><span class="tag-icon">🧗</span> 3 - 4 hr hike to the top, medium-high intensity</span>
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/toptablemountain.jpeg" alt="Platteklip" class="active" />
+              <img src="images/platteklip.jpeg" alt="The Pot Luck Club 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Platteklip - Table Mountain</h4>
+            <p>Hike straight up Table Mountain on the Cape Town-facing side. Quite intense, but amazing views and the 'quickest' way up (apart from the cable cars).</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 20 min drive</span>
+              <span class="tag"><span class="tag-icon">🧗</span> 2 - 3 hr hike to the top, high intensity</span>
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/lionshead.jpeg" alt="Lion's head" class="active" />
+              <img src="images/lionshead2.jpeg" alt="Lion's head" />
+              <img src="images/lionshead3.jpeg" alt="Lion's head" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Lion's Head</h4>
+            <p>If you only have time for one hike - we recommend this one! Our advice would be to go 7-8 am and grab a nice lunch after or go for an afternoon hike after the heat.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 20 min drive</span>
+              <span class="tag"><span class="tag-icon">🧗</span> 2 - 3 hr hike in total (return), high intensity</span>
+            </div>
+          </div>
+          
+                    <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/contourpath.jpeg" alt="Contour path" class="active" />
+              <img src="images/contourpath2.jpg" alt="Contour path 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Contour path - Table Mountain</h4>
+            <p>Easy scenic hike along Table Mountain with amazing city views. Start in Kirstenbosch for a beautiful forest section before following the contour path. </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🧗</span> 2 - 3 hr hike, low intensity</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+            </div>
+          </div>
+          
+                <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/diagonal5.jpeg" alt="Diagonal" class="active" />
+              <img src="images/diagonal3.jpeg" alt="Diagonal2" />
+              <img src="images/diagonal4.jpg" alt="Diagonal3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Diagonal Cave - Table Mountain</h4>
+            <p>A more adventurous Table Mountain hike featuring steep sections, panoramic views, and the dramatic Diagonal Cave. </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🧗</span> 4 - 6 hr hike, moderate-high intensity</span>
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/devilspeak.jpeg" alt="Devil's Peak" class="active" />
+              <img src="images/devilspeak2.jpeg" alt="Devils' Peak 2" />
+              <img src="images/devilspeak3.jpeg" alt="Devil's Peak 3" />
+              <img src="images/devilspeak4.jpeg" alt="Devil's Peak 4" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Hike</div>
+            <h4>Devil's Peak - Table Mountain</h4>
+            <p>A rewarding hike to the highest point of Table Mountain with panoramic views over Cape Town. </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🧗</span> 4 hr hike, moderate intensity</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- DAY TRIPS FROM CAPE TOWN -->
+      <div class="rec-section" id="rec-capetown">
+        <div class="rec-section-header">
+          <h3>Activities Cape Town area</h3>
+        </div>
+        <div class="card-grid">
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/waterfront.jpeg" alt="Waterfront" class="active" />
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Mall and harbour</div>
+            <h4><a href="https://www.google.com/maps/place/V+%26+A+Waterfront,+Victoria+%26+Alfred+Waterfront,+Cape+Town,+8001,+Zuid-Afrika/@-33.9069996,18.4200171,17z/data=!3m1!4b1!4m6!3m5!1s0x1dcc67599abb5bb3:0xcc1a97af54b0520b!8m2!3d-33.9070041!4d18.4225974!16s%2Fg%2F1hc79bl4n?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Waterfront V&A</a></h4>
+            <p>Harbour and mall area. Great for shopping, souvenirs, bars, booking a sunset sailing cruise! The ferry to Robben Island also departs here.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 30 min drive</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+              <span class="tag"><span class="tag-icon">🎁</span> Shopping center</span>
+            </div>
+          </div>
+
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/districtsix2.jpeg" alt="District Six" class="active" />
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Museum</div>
+            <h4><a href="https://www.districtsix.co.za/about-district-six/" target="_blank"class="card-title-link" >District Six Museum</a></h4>
+            <p> Impressive museum capturing Black South African neighbourhood life before their eviction by Apartheid authorities.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">🏛</span> Museum</span>
+            </div>
+          </div>
+            
+            <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/slavelodge2.jpeg" alt="Slave Lodge" class="active" />
+              <img src="images/slavelodge.jpeg" alt="Slave Lodge 2" />
+              <img src="images/slavelodge3.jpeg" alt="Slave Lodge 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Museum</div>
+            <h4><a href="https://www.iziko.org.za/museums/slave-lodge/" target="_blank" class="card-title-link">Slave Lodge</a></h4>
+            <p> Museum commemorating enslaved people that passed through the Cape across the centuries.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">🏛</span> Museum</span>
+            </div>
+          </div>
+          
+            <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/kasteel.jpeg" alt="Castle Good Hope" class="active" />
+              <img src="images/kasteel2.jpeg" alt="Castle Good Hope 2" />
+              <img src="images/kasteel3.jpeg" alt="Castle Good Hope 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Museum</div>
+            <h4><a href="https://www.castleofgoodhope.co.za/" target="_blank" class="card-title-link">Castle of Good Hope</a></h4>
+            <p> Old fortress where the Dutch colonial Governor resided. Also includes museum on Cape Town histories.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">🏛</span> Museum</span>
+            </div>
+          </div> 
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/robbenisland3.jpeg" alt="Robben Island" class="active" />
+              <img src="images/robbenisland.jpeg" alt="Robben Island 2" />
+              <img src="images/robbenisland2.jpeg" alt="Robben Island 3" />
+              <img src="images/robbenisland4.jpeg" alt="Robben Island 4" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Historical site</div>
+            <h4><a href="https://www.robben-island.org.za/" target="_blank" class="card-title-link">Robben Island</a></h4>
+            <p>Infamous prison island where political prisoners where kept, among which with Nelson Mandela for 27 years. Tours are done by ex-prisoners!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">⛴</span> 3 hr activity</span>
+              <span class="tag"><span class="tag-icon">🏛</span> Historical significance</span>
+            </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/neighborgoods4.jpeg" alt="Neighborgoods 1" class="active" />
+              <img src="images/neighborgoods.jpeg" alt="Neighborgoods 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Market</div>
+            <h4><a href="https://www.neighbourgoodsmarket.co.za/" target="_blank" class="card-title-link">Neighborgoods market</a></h4>
+            <p>Old Biscuit Mill District, remade into shopping district for artists and craftsmen. Features a lively market with food, drink and party on Saturdays and Sundays.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+            </div>
+          </div>          
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/penguins.jpg" alt="Boulders Beach" class="active" />
+              <img src="images/penguins3.jpg" alt="Boulders Beach 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Penguins</div>
+            <h4><a href="https://www.google.com/maps/place/Boulders+Beach/@-34.1954366,18.4417012,14.92z/data=!4m6!3m5!1s0x1dcc3e360872e029:0x7cbce00180f42910!8m2!3d-34.1956153!4d18.4503585!16zL20vMGJtNXBf?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Boulders Beach Penguins</a></h4>
+            <p>Visit wild penguins and the reserve at Boulders Beach! Option: pre-book a kayak trip and to spot penguins and sea lions. Or make it part of a Kaap de Goede Hoop day trip!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 1 hr drive</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+            </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/kaapdegoedehoop.jpeg" alt="Kaap de Goede Hoop" class="active" />
+              <img src="images/kaapdegoedehoop2.jpeg" alt="Kaap de Goede Hoop 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Kaap de Goede Hoop</div>
+            <h4><a href="https://www.google.com/maps/place/Kaap+de+Goede+Hoop/@-34.3565063,18.4722169,16.95z/data=!4m6!3m5!1s0x1dcc22fcace03f67:0x35285cf1b77ca2e9!8m2!3d-34.3568425!4d18.4739882!16zL20vMGMxeTM?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Kaap de Goede Hoop</a></h4>
+            <p>The famous navigation point at the extreme point of the African continent. Combine with a visit to Boulder’s Beach and Chapman’s Peak! And watch the monkeys... (keep food and sunglasses close)</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 1.5 hr drive</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+              <span class="tag"><span class="tag-icon">🏛</span> Historical significance</span>
+          </div>
+          </div>
+
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/chapmans peak.jpeg" alt="Chapman's Peak" class="active" />
+              <img src="images/chapmanspeak3.jpeg" alt="Chapman's Peak 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Scenic route</div>
+            <h4><a href="https://www.google.com/maps/place/Chapman's+Peak/@-34.0882955,18.3388019,14z/data=!3m1!4b1!4m6!3m5!1s0x1dcc6bc31e3700fb:0xbcdad588777d6fea!8m2!3d-34.0883333!4d18.3594444!16zL20vMDgxZHp2?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Chapman's Peak</a></h4>
+            <p>Scenic coastal drive with dramatic ocean cliffs, best enjoyed at sunset after visiting Cape Point on the way back to Camps Bay.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> Roadtrip</span>
+              <span class="tag"><span class="tag-icon">⛰</span> Beautiful nature</span>
+          </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/camps bay3.jpeg" alt="Camp's Bay" class="active" />
+              <img src="images/camps bay.jpeg" alt="Camp's Bay 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Camp's Bay</div>
+            <h4><a href="https://www.google.com/maps/place/Camps+Bay,+Kaapstad,+8005,+Zuid-Afrika/@-33.9520227,18.3720868,15z/data=!3m1!4b1!4m6!3m5!1s0x1dcc67ad0e328c89:0xc7a0b241c4464b97!8m2!3d-33.951298!4d18.3830983!16zL20vMDVjOXNz?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="card-title-link">Camp's Bay</a></h4>
+            <p>'The beverly hills of Cape Town’ - trendy beachside part of Cape Town at the end of Chapman’s drive. Good for restaurants and parties.</p>
+            <div class="card-tags">
+            <span class="tag"><span class="tag-icon">🏖️</span> Beachside</span>
+            <span class="tag"><span class="tag-icon">🍹</span> Cocktails</span>
+          </div>
+          </div>    
+
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/kirstenboschconcert.jpeg" alt="Kirstenbosch concert" class="active" />
+              <img src="images/kirstenboschconcert2.jpeg" alt="Kirstenbosch concert 2" />
+              <img src="images/skeleton7.jpeg" alt="Kirstenbosch" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Activity</div>
+            <h4><a href="https://www.sanbi.org/event/kirstenbosch-summer-sunset-concerts-2025-26/ " target="_blank" class="card-title-link">Kirstenbosch (+concert)</a></h4>
+            <p>This is a botanical forest at the foot of Table Mountain, nice for a stroll or lunch and kid-friendly. On Sundays, they have the Kirstenbosch concerts (ranging classical to jazz to pop). Bring your own picnic blanket and enjoy!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 45 min drive</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+              <span class="tag"><span class="tag-icon">🎤</span> Concert</span>
+              <span class="tag"><span class="tag-icon">🌿</span> Nature</span>
+          </div>
+          </div>     
+
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/galileo.jpeg" alt="Galileo Cinema" class="active" />
+              <div class="gallery-dots"></div>
+              </div>
+            <div class="card-label">Activity</div>
+            <h4><a href="https://thegalileo.co.za/" target="_blank" class="card-title-link">Galileo Open Air Cinema</a></h4>
+            <p>Open Air Cinema against the stunning Table Mountain backdrop in Kirstenbosch gardens. Does a variety of film genres, from classic to modern.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 45 min drive</span>
+              <span class="tag"><span class="tag-icon">🎬</span> Movie</span>
+          </div>
+          </div>     
+  
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+             <img src="images/SunsetCruise1.jpeg" alt="SunsetCruise" class="active" />
+              <img src="images/SunsetCruise2.jpeg" alt="SunsetCruise 2" />
+               <img src="images/SunsetCruise3.jpeg" alt="SunsetCruise 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Activity</div>
+            <h4> Sunset Sailing Cruise</h4>
+            <p>1hr or 2hr sailing trips, usually starting from Waterfront. Great way to experience the Cape Town bay and a dramatic sunset view of Table Mountain with a glass champagne</p>
+            <div class="card-tags">
+               <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+               <span class="tag"><span class="tag-icon">🌊</span> On the water</span>
+              <span class="tag"><span class="tag-icon">🎉</span>New for Johan and Madelief</span>
+            </div>
+          </div>
+
+          <div class="card">
+          <div class="card-gallery" data-index="0">
+              <img src="images/Beachvolleybal1.jpeg" alt="friendswhovolley 1" class="active" />
+              <img src="images/Beachvolleybal2.jpeg" alt="friendswhovolley 2" />
+               <img src="images/Beachvolleybal4.jpeg" alt="friendswhovolley 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Activity</div>
+            <h4><a href="https://www.instagram.com/friendswhovolley/" target="_blank" class="card-title-link">Beach Volleybal - Friends Who Volley</a></h4>
+            <p>Every Thursday, free social volleybal tournaments near Clifton beach from ~4pm through sunset. Alternatively just go for good afternoon beach vibes!</p>
+            <div class="card-tags">
+             <span class="tag"><span class="tag-icon">📍</span> Cape Town</span>
+              <span class="tag"><span class="tag-icon">🏖️</span>Beach</span>
+              <span class="tag"><span class="tag-icon">🏐</span>Sports</span>
+              <span class="tag"><span class="tag-icon">🎉</span>New for Johan and Madelief</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- FRANSCHHOEK & STELLENBOSCH (WINERIES) -->
+      <div class="rec-section" id="rec-franschhoek">
+        <div class="rec-section-header">
+          <h3>Activities Franschhoek / Stellenbosch area</h3>
+        </div>
+        <div class="card-grid">
+          
+          <div class="card">
+              <div class="card-gallery" data-index="0">
+              <img src="images/winetram.jpeg" alt="Franschhoek Wine Tram" class="active" />
+              <img src="images/winetram2.jpeg" alt="Franschhoek Wine Tram 2" />
+               <img src="images/winetram3.jpeg" alt="Franschhoek Wine Tram 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Must-do</div>
+            <h4>Franschhoek Wine Tram</h4>
+            <p>The best way to enjoy multiple wineries in a day in Franschhoek without having to drive.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">📍</span> Franschhoek</span>
+              <span class="tag"><span class="tag-icon">🍷</span> Book ahead</span>
+            </div>
+          </div>
+
+          <div class="card">
+          <div class="card-gallery" data-index="0">
+              <img src="images/Boschendal1.jpeg" alt="Boschendal" class="active" />
+              <img src="images/Boschendal2.jpeg" alt="Boschendal 2" />
+               <img src="images/Boschendal3.jpeg" alt="Boschendal 3" />
+                <img src="images/boschendal4.jpeg" alt="Boschendal 4" />
+             <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Winery</div>
+            <h4><a href="https://boschendal.com/eat/picnics/" target="_blank" class="card-title-link">Boschendal Picnic</a></h4>
+            <p>Apart from a quick tasting stop on the winetram, Boschendal also offers a perfectly leisurable way to spend an afternoon in the winelands. Get a table and a picnic blanket, enjoy the music and some lawn games on one of the most iconic estates of the winelands. </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🍷</span> Wine tasting</span>
+              <span class="tag"><span class="tag-icon">🚗</span> 45 min drive</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+              <span class="tag"><span class="tag-icon">🎵</span> Music concert</span>
+            </div>
+          </div>
+
+          <div class="card">
+          <div class="card-gallery" data-index="0">
+              <img src="images/horseriding1.jpg" alt="Horseriding" class="active" />
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Activity</div>
+            <h4><a href="https://horseridesatpetes.co.za/" target="_blank" class="card-title-link">Horse riding in a wildlife reserve</a></h4>
+            <p>A special way to see wildlife in a game reserve near Stellenbosch area! From multi-day safari to 1-2 hours wildlife sanctuary trail. Also for beginners!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🌿️</span>Nature</span>
+              <span class="tag"><span class="tag-icon">🚗</span>1 hr drive</span>
+           </div>
+          </div>
+
+          <div class="card">
+          <div class="card-gallery" data-index="0">
+              <img src="images/Babylonstoren2.jpeg" alt="Babylonstoren" class="active" />
+              <img src="images/Babylonstoren1.jpeg" alt="Babylonstoren 2" />
+               <img src="images/Babylonstoren3.jpeg" alt="Babylonstoren 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Winery</div>
+            <h4><a href="https://babylonstoren.com/" target="_blank" class="card-title-link">Babylonstoren</a></h4>
+            <p>Old Cape Dutch farm, but beautifully modern landscaped estate. Includes a wine cellar, tasting room, vegetable and fruit gardens, walking gardens. Even has a Spa! Also a stop on the winetram, but definitely worth a longer visit. </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🍷</span> Wine tasting</span>
+              <span class="tag"><span class="tag-icon">🛀️</span>Spa</span>
+              <span class="tag"><span class="tag-icon">👶</span> Kid friendly</span>
+              <span class="tag"><span class="tag-icon">🛏️</span>Overnight stay possible</span>
+            </div>
+          </div>  
+
+          <div class="card">
+          <div class="card-gallery" data-index="0">
+              <img src="images/Plaisir1.jpeg" alt="Plaisir" class="active" />
+              <img src="images/Plaisir2.jpeg" alt="Plaisir 1" />
+               <img src="images/Plaisir3.jpeg" alt="Plaisir 2" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Winery</div>
+            <h4><a href="https://www.plaisir.co.za/" target="_blank" class="card-title-link">Plaisir</a></h4>
+            <p>Neighboring estate to Vrede en Lust. 300year old farm house, start of several hiking and horseriding trails. Had a great tasting on the wine tram with delicious wine-nougat pairing!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🍷</span> Wine tasting</span>
+              <span class="tag"><span class="tag-icon">🌿️</span>Nature</span>
+            </div>
+          </div>   
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/UvaMira1.jpeg" alt="UvaMira" class="active" />
+              <img src="images/UvaMira2.jpeg" alt="UvaMira 2" />
+               <img src="images/UvaMira3.jpeg" alt="UvaMira 3" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+           <div class="card-label">Winery</div>
+            <h4><a href="https://www.uvamira.com/" target="_blank" class="card-title-link">Uva Mira</a></h4>
+            <p>Delicious wine tasting experience and possibly the highest view over all of the winelands and the coastline!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🍷</span> Wine tasting</span>
+            </div>
+          </div>   
+          
+        </div>
+      </div>
+      
+      <!-- ROAD TRIPS (MULTIPLE DAYS) -->
+      <div class="rec-section" id="rec-roadtrips">
+        <div class="rec-section-header">
+          <h3>Road trips</h3>
+        </div>
+        <div class="card-grid">
+
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/gardenroute2.jpeg" alt="Garden Route" class="active" />
+              <img src="images/gardenroute.jpeg" alt="Garden Route 2" />
+               <img src="images/gardenroute3.jpeg" alt="Garden Route 3" />
+               <img src="images/gardenroute4.jpeg" alt="Garden Route 4" />
+               <img src="images/gardenroute5.jpeg" alt="Garden Route 5" />
+               <img src="images/gardenroute6.jpeg" alt="Garden Route 6" />
+               <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+            <div class="card-label">Adventure</div>
+            <h4>Garden Route</h4>
+            <p>The Garden Route is one of South Africa’s most beautiful road trips, with ocean views, forests, and charming coastal towns along the way. If you have extra time, drive the spectacular Swartberg Pass for dramatic mountain scenery and one of the country’s most unforgettable roads.</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🌿️</span>Nature</span>
+              <span class="tag"><span class="tag-icon">🚗</span> 4-14 days, depending how much you want to see</span>
+              <span class="tag"><span class="tag-icon">📅</span> Multi-day</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/wolfsberg3.jpeg" alt="Cedarberg" class="active" />
+              <img src="images/wolfsberg5.jpeg" alt="Cedarberg 2" />
+               <img src="images/ecocabin3.jpeg" alt="Cedarberg 3" />
+               <img src="images/ecocabin4.jpeg" alt="Cedarberg 4" />
+               <img src="images/wolfsberg6.jpeg" alt="Cedarberg 4" />
+               <img src="images/wolfsberg7.jpeg" alt="Cedarberg 4" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+              <div class="gallery-dots"></div>
+            </div>
+            <div class="card-label">Adventure</div>
+            <h4>Cederberg</h4>
+            <p>Cederberg is a mountainous nature reserve, about 3hrs drive north of Cape Town. Great for medium and more challenging hikes, ancient cave paintings and rock formations, a wine estate, and camping / lodges in between all that. If you're coming in from outside, hikes start after 1-1.5 hr drive into the park, so start early! We stayed at Solace Eco Cabin just outside the reserve, highly recommend!</p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 2-5 days</span>
+              <span class="tag"><span class="tag-icon">🌿️</span >Nature</span>
+              <span class="tag"><span class="tag-icon">⛺️</span> Camping</span>
+              <span class="tag"><span class="tag-icon">📅</span> Multi-day</span>
+            </div>
+          </div>
+       
+       <div class="card">
+            <div class="card-gallery" data-index="0">
+              <img src="images/ecocabin2.jpeg" alt="Eco cabin" class="active" />
+              <img src="images/ecocabin.jpeg" alt="Eco cabin 2" />
+              <img src="images/ecocabin7.jpeg" alt="Eco cabin 3" />
+              <img src="images/ecocabin8.jpeg" alt="Eco cabin 4" />
+              <button class="gallery-prev" onclick="galleryStep(this,-1)">&#8249;</button>
+              <button class="gallery-next" onclick="galleryStep(this,1)">&#8250;</button>
+            <div class="gallery-dots"></div>
+            </div>
+            <div class="card-label">Adventure</div>
+            <h4>Ecocabins & extended winelands</h4>
+            <p>Several wine estates have opportunities for overnight stay. We stayed on an 'glamping' eco cabin in the hillside of Boschendal, called Camp Canoe, with beautiful valley sunset views. Take the opportunity to explore deeper into the winelands, e.g. Tulbagh, Franschhoek, Paarl, Jonkershoek. Alternatively, only a short taxi drive away from the wine tram station! </p>
+            <div class="card-tags">
+              <span class="tag"><span class="tag-icon">🚗</span> 2-3 days</span>
+              <span class="tag"><span class="tag-icon">🌿️</span>Nature</span>
+              <span class="tag"><span class="tag-icon">⛺️</span>Glamping</span>
+              <span class="tag"><span class="tag-icon">📅</span> Multi-day</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="hint-box">
+        Want more tips? Ask us at <strong>liefenlammersgaantrouwen@gmail.com</strong> — we're happy to help plan your trip!
+      </div>
+    </div>
+  </main>
+
+  <!-- GIFTS -->
+  <main id="gifts" class="page">
+    <div class="container">
+      <p class="section-eyebrow">From the heart</p>
+      <h2 class="section-title">Gifts</h2>
+      
+      <div class="accom-highlight">
+        <div class="accom-highlight-badge">💛 No gift required</div>
+        <h3>Truly, your presence is enough</h3>
+        <p>This is a destination wedding, and we know it takes real effort to be here — time off work, travel, and planning a holiday around our big day. That alone means more to us than any gift ever could. Please don't feel any obligation to bring or send anything.</p>
+      </div>
+
+      <div class="divider"></div>
+      <p class="section-eyebrow">If you'd still like to</p>
+      <h2 class="section-title" style="font-size:26px">Contribute to our honeymoon</h2>
+      <p class="section-sub">For those who'd really like to give something, the easiest way is a small contribution towards our next adventure together.</p>
+
+      <div class="honeymoon-card">
+        <div class="qr-box">
+          <img src="images/qr28july.jpeg" alt="Scan to contribute to our honeymoon fund" />
+          <div class="qr-caption">Scan to contribute</div>
+        </div>
+        <div class="bank-details">
+          <div class="bank-row">
+            <span class="bank-label">Account name</span>
+            <span class="bank-value">Madelief &amp; Johan</span>
+          </div>
+          <div class="bank-row">
+            <span class="bank-label">IBAN</span>
+            <span class="bank-value" id="bank-iban">NL52 ASNB 8822 0726 26</span>
+            <button class="copy-btn" onclick="copyText('bank-iban', this)">Copy</button>
+          </div>
+          <div class="bank-row">
+            <span class="bank-label">BIC/SWIFT code</span>
+            <span class="bank-value">ASNBNL21</span>
+          </div>
+          <div class="bank-row">
+            <span class="bank-label">Reference</span>
+            <span class="bank-value">Honeymoon — [your name]</span>
+          </div>
+        </div>
+      </div>
+      <p class="qr-note">Any amount, big or small, is hugely appreciated 💚</p>
+
+      <div class="divider"></div>
+      <h2 class="section-title" style="font-size:26px">Prefer to surprise us instead? We would love that just as much!</h2>
+      <p class="section-sub">If you're considering a specific physical gift, keep in mind that we depart for our honeymoon about a week after the wedding — let's find a date shortly after we're back to connect for those instead!</p>
+      
+      <div class="hint-box" style="margin-top:2rem">
+        For any questions, reach out to <strong>liefenlammersgaantrouwen@gmail.com</strong>
+      </div>
+    </div>
+  </main>
+  
+<!-- DRESSCODE -->
+  <main id="dresscode" class="page">
+    <div class="container">
+      <p class="section-eyebrow">What to wear</p>
+      <h2 class="section-title">Dress code: Summer Chic!</h2>
+      <p class="section-sub">A little inspiration for your outfit if you are going shopping. Wear whatever feels most like you, and something you feel beautiful and confident in!</p>
+
+      <div class="dress-tabs">
+        <button class="dress-tab" onclick="showDress('friday', this)">
+          <span class="day-tab-label">Friday</span>
+          <span class="day-tab-sub">Elegant pool party</span>
+        </button>
+        <button class="dress-tab active" onclick="showDress('saturday', this)">
+          <span class="day-tab-label">Saturday</span>
+          <span class="day-tab-sub">Summer chic</span>
+        </button>
+      </div>
+
+      <!-- FRIDAY -->
+      <div class="dress-block" id="dress-friday">
+        <p class="section-sub" style="margin-bottom:0.5rem">Kick off the weekend by the pool! Swimwear is very welcome during the first drinks— pair it with a kaftan or light cover-up if you like. During the braai, we advise nice summer dresses or summer shirts.</p>
+        
+         <ul class="dress-list">
+          <li>Light, breathable fabrics☀️</li>
+          <li>Colorful clothes</li>
+          <li>Swimwear welcome (we will make sure you can change in someone's room) 🩱</li>
+          <li>Relaxed &amp; elegant 🍹</li>
+        </ul>
+        
+        <div class="dress-grid">
+        <div class="dress-item">
+         <img src="images/dresscodefriday.jpeg" alt="Swimwear" />
+           <div class="dress-item-label">Summer dresses and shirts</div>
+         </div>
+         <div class="dress-item" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div>
+           <img src="images/preevent.jpg" alt="Impression1" style="height:auto; width:100%;" />
+          <div class="dress-item-label">Impression 1</div>
+        </div>
+        <div>
+            <img src="images/preevent2.png" alt="Impression2" style="height:auto; width:100%;" />
+          <div class="dress-item-label">Impression 2</div>
+         </div>
+      </div>
+      </div>
+      </div>
+
+      <!-- SATURDAY -->
+      <div class="dress-block visible" id="dress-saturday">
+
+        <div class="palette-card">
+          <h3>Suggested colour palette</h3>
+          <p>If you'd like a starting point for <strong>Saturday/wedding day</strong>, we love the colors below, as they suit the vineyard backdrop beautifully. This is just <strong>inspiration, not a rule</strong> — similar colors (burgundy) or other pastels (blue, yellow, floral) are also welcome!</p>
+          <div class="palette-swatches">
+            <div class="palette-swatch"><div class="palette-swatch-color" style="background:#F0E6D2"></div><div class="palette-swatch-label">Crème</div></div>
+            <div class="palette-swatch"><div class="palette-swatch-color" style="background:#B7C4A3"></div><div class="palette-swatch-label">Sage</div></div>
+            <div class="palette-swatch"><div class="palette-swatch-color" style="background:#C97C5D"></div><div class="palette-swatch-label">Terracotta</div></div>
+            <div class="palette-swatch"><div class="palette-swatch-color" style="background:#8A8B5C"></div><div class="palette-swatch-label">Olive</div></div>
+            <div class="palette-swatch"><div class="palette-swatch-color" style="background:#C8A18E"></div><div class="palette-swatch-label">Dusty rose</div></div>
+          </div>
+        </div>
+        
+        <ul class="dress-list">
+          <li><strong>Dresses</strong> — below the knee is encouraged, to keep things a little more formal.</li>
+          <li><strong>Suits</strong> — light fabrics and light colours are recommended, since it will be warm in the afternoon sun.</li>
+          <li><strong>Jumpsuits</strong> and other formal alternatives are very welcome too — wear whatever feels most like you.</li>
+          <li><strong>Hats</strong> could be a nice addition to the outfit, both for the look and for some extra shade during the ceremony and garden party.</li>
+          <li>Please avoid <strong>white</strong>, <strong>black</strong> and <strong>red</strong>.</li>
+        </ul>
+        
+        <div class="dress-grid">
+          <div class="dress-item">
+            <img src="images/women.jpeg" alt="Dresses" />
+            <div class="dress-item-label">Dresses & jumpsuits</div>
+          </div>
+          <div class="dress-item">
+            <img src="images/men.jpeg" alt="Light suits" />
+            <div class="dress-item-label">Light suits</div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="hint-box" style="margin-top:2rem">
+        Need outfit inspiration or have a question about what to wear? Reach out at <strong>liefenlammersgaantrouwen@gmail.com</strong>
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTACT & RSVP -->
+  <main id="contact" class="page">
+    <div class="container">
+      <h2 class="section-title">Contact &amp; RSVP</h2>
+      
+      <div class="accom-highlight">
+        <h3>Let us know you're coming!</h3>
+        <p>Please confirm your attendance, dietary requirements, and accommodation preference through our short RSVP form. Note: complete one form per guest, so if your partner is invited as well, make sure they also complete the form.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGKTtujjun9twmRF_JzLB6s9bigTIVN9rgZOe_4Ya821s7XA/viewform?usp=publish-editor" target="_blank" class="btn-primary">Open the RSVP form →</a>
+      </div>
+
+      <div class="divider"></div>
+      <p class="section-eyebrow">Contact details</p>
+      <h2 class="section-title" style="font-size:26px">Reach out directly in case of any other questions!</h2>
+      <p class="section-sub">Our dear friends <strong>Carla ten Kate, Wouter Nientker, Eva Wassenberg and Roelant Sanders </strong> are Masters of Ceremonies! You can reach us and them at <strong>liefenlammersgaantrouwen@gmail.com</strong> — we're happy to help with anything! </p>
+    </div>
+  </main>
+
+  <!-- GALLERY -->
+  <main id="gallery" class="page">
+    <div class="container">
+      <p class="section-eyebrow">Just for fun</p>
+      <h2 class="section-title">A few of our favourite moments</h2>
+      <p class="section-sub">A loose collection of photos that capture us — click any photo to see it larger.</p>
+
+      <div class="photo-collage">
+        <div class="collage-item"><img src="images/gallery1.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery2.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery3.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery4.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery5.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery6.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery7.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery8.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery9.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery10.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery11.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery12.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery13.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery14.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery15.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery16.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery17.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery17-1.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery18.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery19.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery20.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+        <div class="collage-item"><img src="images/gallery21.jpeg" alt="" onclick="openLightbox(this.src)"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    Madelief &amp; Johan &nbsp;·&nbsp; 8-10 January 2027 &nbsp;·&nbsp; Vrede &amp; Lust, Winelands
+  </footer>
+
+ <script>
+    // ── Navigation ──
+    function showPage(id, btn) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('visible'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('visible');
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (id === 'accommodation') setTimeout(initMap, 80);
+    }
+
+    function showDay(id, btn) {
+      document.querySelectorAll('.day-block').forEach(d => d.classList.remove('visible'));
+      document.querySelectorAll('.day-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('day-' + id).classList.add('visible');
+      btn.classList.add('active');
+    }
+
+    function showDress(id, btn) {
+      document.querySelectorAll('.dress-block').forEach(d => d.classList.remove('visible'));
+      document.querySelectorAll('.dress-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('dress-' + id).classList.add('visible');
+      btn.classList.add('active');
+    }
+
+    function copyText(elId, btn) {
+      const text = document.getElementById(elId).textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1500);
+      });
+    }
+
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('visible');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('visible');
+    }
+
+    // ── Gallery logic ──
+    function initGallery(gallery) {
+      const imgs = gallery.querySelectorAll('img');
+      const dotsContainer = gallery.querySelector('.gallery-dots');
+      if (imgs.length <= 1) { gallery.classList.add('single'); return; }
+      dotsContainer.innerHTML = '';
+      imgs.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Photo ' + (i + 1));
+        d.onclick = () => goTo(gallery, i);
+        dotsContainer.appendChild(d);
+      });
+    }
+    function goTo(gallery, index) {
+      const imgs = gallery.querySelectorAll('img');
+      const dots = gallery.querySelectorAll('.gallery-dot');
+      const count = imgs.length;
+      index = ((index % count) + count) % count;
+      imgs.forEach((img, i) => img.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      gallery.dataset.index = index;
+    }
+    function galleryStep(btn, dir) {
+      const gallery = btn.closest('.card-gallery');
+      goTo(gallery, (parseInt(gallery.dataset.index) || 0) + dir);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card-gallery').forEach(initGallery);
+    });
+
+    // ── Map ──
+    
+    let mapInitialised = false;
+    function initMap() {
+      if (mapInitialised) return;
+      mapInitialised = true;
+
+      const map = L.map('accom-map', { zoomControl: true, scrollWheelZoom: false })
+        .setView([-33.835, 18.950], 14);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 19
+      }).addTo(map);
+
+      function makeIcon(emoji) {
+        return L.divIcon({
+          html: `<div style="font-size:22px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.25))">${emoji}</div>`,
+          iconSize: [28, 28], iconAnchor: [14, 28], popupAnchor: [0, -28], className: ''
+        });
+      }
+
+      const locations = [
+        {
+          lat: -33.8377, lng: 18.9537, emoji: '🍇',
+          name: 'Vrede &amp; Lust Wine Estate',
+          detail: 'Wedding venue &amp; 40 on-site guests',
+          link: 'http://www.vnl.co.za/', linkLabel: 'vnl.co.za'
+        },
+        {
+          lat: -33.8266, lng: 18.9401, emoji: '🏡',
+          name: 'Paddabult Cottages',
+          detail: '24 guests · 6× 4-person apartments · 2 km',
+          link: 'https://www.paddabult.com/', linkLabel: 'paddabult.com'
+        },
+        {
+          lat: -33.8347, lng: 18.9543, emoji: '🏛️',
+          name: 'Station House',
+          detail: '14 guests · 7× 2-person rooms · 500 m',
+          link: 'http://www.stationhouse.co.za/', linkLabel: 'stationhouse.co.za'
+        },
+        {
+          lat: -33.8349, lng: 18.9546, emoji: '🌿',
+          name: "Kimi's Cottage",
+          detail: '4 guests · 500 m · next to Station House',
+          link: 'https://www.booking.com/hotel/za/kimi-39-s-cottage.en-gb.html', linkLabel: 'Booking.com'
+        }
+      ];
+
+      locations.forEach(loc => {
+        L.marker([loc.lat, loc.lng], { icon: makeIcon(loc.emoji) })
+          .addTo(map)
+          .bindPopup(`
+            <div class="map-popup">
+              <strong>${loc.name}</strong>
+              <span class="map-popup-detail">${loc.detail}</span><br/>
+              <a href="${loc.link}" target="_blank">→ ${loc.linkLabel}</a>
+            </div>
+          `, { maxWidth: 220 });
+      });
+    }
+  </script>
+
+</body>
+</html>
